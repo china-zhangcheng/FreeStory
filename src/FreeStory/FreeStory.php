@@ -23,7 +23,7 @@ class FreeStory extends StoryAbstract
      *
      * @return string
      */
-    public function getContributor() :string
+    public function getContributor()
     {
 
         return "http://www.phpzc.net";

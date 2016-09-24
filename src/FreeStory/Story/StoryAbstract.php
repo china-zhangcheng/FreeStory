@@ -1,6 +1,4 @@
 <?php
-declare(strict_types=1);
-
 namespace FreeStory\Story;
 
 
@@ -12,7 +10,7 @@ abstract class StoryAbstract
      *
      * @return string
      */
-    abstract public function getContributor() :string;
+    abstract public function getContributor();
 
 
 

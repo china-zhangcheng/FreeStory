@@ -20,7 +20,7 @@ abstract class StoryAbstract
      *
      * @return StoryDetail 搜索的小说结果对象
      */
-    abstract public function search(string $name) ;
+    abstract public function search( $name) ;
 
 
     /**
@@ -30,7 +30,7 @@ abstract class StoryAbstract
      *
      * @return StoryDirectory
      */
-    abstract public function getStoryDirectory(string $id) ;
+    abstract public function getStoryDirectory( $id) ;
 
     /**
      * 取得章节内容

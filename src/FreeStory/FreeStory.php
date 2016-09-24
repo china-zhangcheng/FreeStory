@@ -35,7 +35,7 @@ class FreeStory extends StoryAbstract
      *
      * @return StoryDetail 搜索的小说结果对象
      */
-    public function search(string $name)
+    public function search( $name)
     {
 
         $url = 'http://so.biquge.la/cse/search?s=7138806708853866527&nsid=0&q=' . $name;
@@ -78,7 +78,7 @@ class FreeStory extends StoryAbstract
      *
      * @return StoryDirectory
      */
-    public function getStoryDirectory(string $id)
+    public function getStoryDirectory( $id)
     {
 
         // 获得目录页数据

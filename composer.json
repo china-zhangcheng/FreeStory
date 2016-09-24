@@ -1,0 +1,21 @@
+{
+  "name": "china-zhangcheng/free_story",
+  "description": "FreeStory-Open a novel search algorithm interface",
+  "keywords": ["Story","FreeStory"],
+  "homepage": "https://github.com/china-zhangcheng/FreeStory",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Zhang Cheng",
+      "email": "zhang5474jj@163.com",
+      "homepage": "https://github.com/china-zhangcheng/FreeStory"
+    }
+  ],
+  "autoload": {
+    "psr-0": {"FreeStory": "src/"}
+  },
+  "require": {
+    "php": ">=7.1.0"
+  }
+}

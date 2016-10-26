@@ -27,7 +27,7 @@ class StoryItem
     public $title;
 
 
-    function __construct(string $chap_id,string $title,string $id)
+    function __construct( $chap_id, $title, $id)
     {
         $this->chap_id = $chap_id;
         $this->title = $title;

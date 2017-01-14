@@ -1,15 +1,15 @@
 {
-  "name": "china-zhangcheng/free_story",
+  "name": "phpzc/free_story",
   "description": "FreeStory-Open a novel search algorithm interface",
   "keywords": ["Story","FreeStory"],
-  "homepage": "https://github.com/china-zhangcheng/FreeStory",
+  "homepage": "https://github.com/phpzc/FreeStory",
   "type": "library",
   "license": "MIT",
   "authors": [
     {
       "name": "Zhang Cheng",
       "email": "zhang5474jj@163.com",
-      "homepage": "https://github.com/china-zhangcheng/FreeStory"
+      "homepage": "https://github.com/phpzc/FreeStory"
     }
   ],
   "autoload": {

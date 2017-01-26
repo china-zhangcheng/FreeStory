@@ -1,0 +1,7 @@
+<phpunit bootstrap="tests/auto.php">
+    <testsuites>
+        <testsuite name="freestory">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>

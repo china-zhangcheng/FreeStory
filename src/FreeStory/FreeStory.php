@@ -96,7 +96,7 @@ class FreeStory extends StoryAbstract
         {
             $menu[] = [
                 'title'=>$v,
-                'chap_id'=>rtrim($match[1][$k],'.html'),
+                'chap_id'=>(explode('/',rtrim($match[1][$k],'.html')))[3],
                 'menu_num'=> $i,
             ];
             $i++;
@@ -166,10 +166,11 @@ class FreeStory extends StoryAbstract
         }
 
         //var_dump($match[1]);
-        $mulu = iconv("GB2312//IGNORE", "UTF-8//IGNORE", $match[1]);
+        //$mulu = iconv("GB2312//IGNORE", "UTF-8//IGNORE", $match[1]);
+        $mulu = $match[1];
         //提取具体章节数据
         //匹配出 章节对应页面
-        $preg = '/<a href="(.*?)">(.*?)<\/a>/s';
+        $preg = '/<a style="" href="(.*?)">(.*?)<\/a>/s';
         $matchResult = preg_match_all($preg, $mulu, $match);
         //var_dump($matchResult);
         if (empty($matchResult)) {
@@ -194,13 +195,15 @@ class FreeStory extends StoryAbstract
 
         $data = $this->request($url);
 
-        $preg = '/<div id="content"><script>readx\(\);<\/script>(.*?)<\/div>/s';
+        $preg = '/<div id="content">(.*?)<script>chaptererror\(\)\;<\/script>(.*?)<\/div>/s';
         $matchResult = preg_match($preg,$data,$match);
 
         if(!$matchResult)
             return '';
 
-        $content = iconv("GB2312//IGNORE","UTF-8//IGNORE",$match[1]) ;
+        //$content = iconv("GB2312//IGNORE","UTF-8//IGNORE",$match[1]) ;
+        $content = $match[1] ;
+
 
         $content = str_replace('<br />',"\n",$content);
         $content = str_replace('&nbsp;','',$content);
